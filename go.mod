@@ -1,4 +1,4 @@
-module planning-poker
+module github.com/martinhrvn/planning-poker
 
 go 1.17
 
