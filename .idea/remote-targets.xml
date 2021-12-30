@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <option name="projectDefaultTargetUuid" value="2feb4e97-5728-4e6e-8002-38638913cbc1" />
+    <targets>
+      <target name="WSL - Ubuntu" type="wsl" uuid="2feb4e97-5728-4e6e-8002-38638913cbc1">
+        <config>
+          <option name="distributionMsId" value="Ubuntu" />
+          <option name="projectRootOnTarget" value="/mnt/c/Users/P3503377/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/213.5744.223/jbr/bin&#10;/planning-poker" />
+        </config>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config>
+            <option name="goPath" value="/home/martin/go" />
+            <option name="goRoot" value="/usr/local/go/bin/go" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
