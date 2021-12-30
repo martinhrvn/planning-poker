@@ -1,8 +1,8 @@
 package game_test
 
 import (
+	"github.com/martinhrvn/planning-poker/src/game"
 	"github.com/stretchr/testify/assert"
-	"planning-poker/src/game"
 	"testing"
 )
 
