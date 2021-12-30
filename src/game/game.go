@@ -1,6 +1,9 @@
 package game
 
-import "errors"
+import (
+	"errors"
+	"sort"
+)
 
 type Game struct {
 	players map[string]Player
@@ -28,6 +31,9 @@ func (g Game) Players() []Player {
 	for _, p := range g.players {
 		players = append(players, p)
 	}
+	sort.Slice(players, func(i, j int) bool {
+		return players[i].Id < players[j].Id
+	})
 	return players
 }
 
