@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: 1.17
-      - uses: paambaati/codeclimate-action@v2.2.4
+      - uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: 24e62d9482ee1d60c7bac4bbde59a7b727c64817720590e7a940ebc05ab7b138
         with:
