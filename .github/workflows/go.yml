@@ -12,14 +12,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
         go-version: 1.17
-
     - name: Build
       run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
+   - name: Test
+     run: go test -cover -v ./...
+  coverage:
+    needs: [ build ]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+      - uses: paambaati/codeclimate-action@v2.2.4
+        env:
+          CC_TEST_REPORTER_ID: 24e62d9482ee1d60c7bac4bbde59a7b727c64817720590e7a940ebc05ab7b138
+        with:
+          coverageCommand: go test -cover -v ./...
