@@ -8,7 +8,7 @@ type Game struct {
 }
 
 func New() Game {
-	return Game{}
+	return Game{players: map[string]Player{}}
 }
 
 func (g Game) Started() bool {
@@ -24,12 +24,17 @@ func (g *Game) Start() error {
 }
 
 func (g Game) Players() []Player {
-	players := make([]Player, len(g.players))
+	players := make([]Player, 0)
+	for _, p := range g.players {
+		players = append(players, p)
+	}
 	return players
 }
 
 func (g *Game) AddPlayers(players []Player) {
 	for _, player := range players {
-		g.players[player.Id] = player
+		if _, found := g.players[player.Id]; !found {
+			g.players[player.Id] = player
+		}
 	}
 }
